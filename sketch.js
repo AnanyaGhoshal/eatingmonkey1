@@ -83,19 +83,19 @@ function draw() {
      restart.visible = true;
      gameState = END;
      gameoversound.play(); 
-    
+  }
    }  else if (gameState === END){
    
-    FoodGroup = setVelocityXEach(0);
-    obstacleGroup = setVelocityXEach(0);
-    FoodGroup = setLifetimeEach(-1);
-    obstacleGroup = setLifetimeEach(-1);
+    FoodGroup.setVelocityXEach(0);
+    obstacleGroup.setVelocityXEach(0);
+    FoodGroup.setLifetimeEach(-1);
+    obstacleGroup.setLifetimeEach(-1);
     ground.velocityX = 0;  
     monkey.velocityY = 0;
    
       
     }
-  }
+  
     
     if (gameState === END && mousePressedOver(restart)){
          reset();
